@@ -1,0 +1,191 @@
+.section {
+  overflow: hidden;
+  padding-top: var(--space-section-md);
+  background-image: url("/media/common/bg_begie_dark.jpg");
+  background-position: left top;
+  background-repeat: repeat;
+  background-size: auto;
+
+  color: #151515;
+}
+
+/* ----------------------------------------
+   CASE label
+---------------------------------------- */
+
+.caseLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-family: var(--font-cinzel), serif;
+  font-size: var(--type-case-label);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  color: rgba(21, 21, 21, 0.5);
+}
+
+/* ----------------------------------------
+   Main content
+---------------------------------------- */
+
+.content {
+  margin-top: var(--space-section-md);
+}
+
+.statement {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: var(--font-pretendard), sans-serif;
+  font-size: var(--text-heading-3);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #151515;
+}
+
+/* ----------------------------------------
+   Visual composition
+---------------------------------------- */
+
+.visual {
+  display: flex;
+  gap: 8%;
+  width: 100%;
+  margin-top: var(--space-content-lg);
+}
+
+/* Mobile visual is intentionally lower */
+.mobileVisual {
+  width: 60%;
+  max-width: 468px;
+  padding-top: clamp(120px, 14.58vw, 280px);
+}
+
+.desktopColumn {
+  width: 100%;
+  max-width: 1077px;
+  margin-left: auto;
+  margin-right: calc(50% - 50vw);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ----------------------------------------
+   Project information
+---------------------------------------- */
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: var(--space-content-lg);
+  gap: var(--space-content-md);
+}
+
+.projectTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.englishTitle {
+  margin: 0;
+  font-family: var(--font-cinzel), serif;
+  font-size: var(--type-case-label);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  color: rgba(21, 21, 21, 0.5);
+}
+
+.projectTitle h2 {
+  margin: 0;
+  font-family: var(--font-pretendard), sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: #151515;
+}
+
+@supports (font-size: clamp(1px, 2vw, 3px)) {
+  .projectTitle h2 {
+    font-size: clamp(22px, calc(1.152rem + 0.915vw), 36px);
+  }
+}
+
+.metadata {
+  margin: 0;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.03em;
+  color: rgba(21, 21, 21, 0.8);
+}
+
+@supports (font-size: clamp(1px, 2vw, 3px)) {
+  .metadata {
+    font-size: clamp(14px, calc(0.827rem + 0.196vw), 17px);
+  }
+}
+
+/* ----------------------------------------
+   Basic responsive skeleton
+---------------------------------------- */
+
+@media (max-width: 56.25rem) {
+  .section {
+    padding-bottom: var(--space-section-lg);
+  }
+
+  .visual {
+    flex-direction: column;
+    row-gap: var(--space-content-lg);
+  }
+
+  .desktopColumn {
+    display: contents;
+  }
+
+  .mobileVisual {
+    max-width: 468px;
+    width: 100%;
+    margin-inline: auto;
+    padding-top: 0;
+  }
+
+  .projectInfo {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 40rem) {
+  .content {
+    margin-top: 96px;
+  }
+
+  .statement {
+    font-size: 30px;
+  }
+
+  .visual {
+    margin-top: 72px;
+  }
+
+  .projectTitle {
+    gap: 16px;
+  }
+
+  .metadata {
+    font-size: 14px;
+  }
+}

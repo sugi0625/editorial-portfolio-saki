@@ -1,0 +1,328 @@
+.section {
+  overflow: hidden;
+  padding-top: var(--space-section-md);
+  padding-bottom: var(--space-section-lg);
+  background-image: url("/media/common/bg_begie_dark.jpg");
+  background-position: left top;
+  background-repeat: repeat;
+  background-size: auto;
+  color: #151515;
+}
+
+/* ----------------------------------------
+   CASE label
+---------------------------------------- */
+
+.caseLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-family: var(--font-cinzel), serif;
+  font-size: var(--type-case-label);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  color: rgba(21, 21, 21, 0.5);
+}
+
+/* ----------------------------------------
+   Statement
+---------------------------------------- */
+
+.statement {
+  display: flex;
+  flex-direction: column;
+  margin: var(--space-section-md) 0 0;
+  font-family: var(--font-pretendard), sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #151515;
+}
+
+@supports (font-size: clamp(1px, 2vw, 3px)) {
+  .statement {
+    font-size: clamp(30px, calc(1.446rem + 1.046vw), 42px);
+  }
+}
+
+/* ----------------------------------------
+   Desktop visual composition
+---------------------------------------- */
+
+.visualGrid {
+  display: grid;
+  grid-template-columns:
+    minmax(calc(30% - var(--space-content-sm)), 320px)
+    minmax(0, 1fr)
+    minmax(calc(70% - var(--space-content-sm)), 956px);
+  grid-template-areas:
+    "mobile . desktop"
+    "mobile . detail";
+  align-items: start;
+  width: 100%;
+  max-width: 1560px;
+  margin-top: var(--space-section-xl);
+  margin-left: auto;
+  column-gap: var(--space-content-sm);
+  row-gap: var(--space-content-lg);
+}
+
+/* common */
+
+.experienceItem {
+  min-width: 0;
+}
+
+.image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+.itemLabel {
+  margin-top: var(--space-content-sm);
+}
+
+.itemLabel h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: var(--space-2);
+  font-family: var(--font-cinzel), serif;
+  font-size: var(--text-body-lg);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.itemLabel p {
+  font-family: var(--font-cinzel), serif;
+  font-size: var(--type-case-label);
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+  color: rgba(21, 21, 21, 0.7);
+  white-space: nowrap;
+}
+
+.alignEnd {
+  text-align: right;
+}
+
+.alignEnd h3 {
+  justify-content: flex-end;
+}
+
+/* individual */
+
+.desktop {
+  grid-area: desktop;
+  justify-self: end;
+  width: min(100%, 956px);
+}
+
+.mobile {
+  position: relative;
+  grid-area: mobile;
+  align-self: start;
+  width: min(100%, 320px);
+  padding-top: clamp(80px, 8vw, 160px);
+}
+
+.mobile .itemLabel {
+  position: absolute;
+  left: 115%;
+  bottom: 0;
+}
+
+.detail {
+  grid-area: detail;
+  justify-self: end;
+  width: min(80%, 680px);
+  margin-top: var(--space-content-md);
+  margin-right: -5%;
+}
+
+/* ----------------------------------------
+   Closing
+---------------------------------------- */
+
+.closing {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: var(--space-content-lg);
+
+  margin-top: var(--space-section-xl);
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+
+  gap: var(--space-content-lg);
+}
+
+.projectTitle {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.projectTitle p {
+  margin: 0;
+
+  font-family: var(--font-cinzel), serif;
+  font-size: var(--type-case-label);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+
+  color: rgba(21, 21, 21, 0.5);
+}
+
+.projectTitle h3 {
+  margin: 0;
+
+  font-family: var(--font-pretendard), sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+
+  color: #151515;
+}
+
+@supports (font-size: clamp(1px, 2vw, 3px)) {
+  .projectTitle h3 {
+    font-size: clamp(22px, calc(1.152rem + 0.915vw), 36px);
+  }
+}
+
+.liveLink {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+  font-family: var(--font-cinzel), serif;
+  font-size: var(--type-case-label);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #151515;
+  text-decoration: none;
+}
+
+.liveLink svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .liveLink {
+    transition: gap 0.35s ease-out;
+  }
+
+  .liveLink:hover {
+    gap: 30px;
+  }
+}
+
+.endLabel {
+  margin: 0;
+  font-family: var(--font-cinzel), serif;
+  font-size: var(--type-case-label);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  color: rgba(21, 21, 21, 0.5);
+}
+
+@media (max-width: 90rem) {
+  .mobile .itemLabel {
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+}
+
+/* ----------------------------------------
+   Basic responsive skeleton
+---------------------------------------- */
+
+@media (max-width: 56.25rem) {
+  .visualGrid {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "desktop"
+      "mobile"
+      "detail";
+
+    row-gap: var(--space-section-md);
+  }
+
+  .desktop,
+  .mobile,
+  .detail {
+    justify-self: center;
+    width: 100%;
+  }
+
+  .desktop {
+    max-width: 956px;
+  }
+
+  .mobile {
+    max-width: 320px;
+    padding-top: 0;
+  }
+
+  .detail {
+    max-width: 680px;
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 40rem) {
+  .statement {
+    margin-top: 96px;
+    font-size: 30px;
+  }
+
+  .visualGrid {
+    margin-top: 72px;
+    row-gap: 96px;
+  }
+
+  .itemLabel {
+    margin-top: 36px;
+  }
+
+  .closing {
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: 104px;
+  }
+
+  .projectInfo {
+    gap: 64px;
+  }
+
+  .projectTitle {
+    gap: 16px;
+  }
+
+  .endLabel {
+    align-self: flex-end;
+  }
+}

@@ -1,0 +1,152 @@
+.section {
+  overflow: hidden;
+  padding-top: var(--space-section-md);
+  padding-bottom: var(--space-section-lg);
+  background-color: #0e0e0e;
+  background-image: url(/media/common/bg_black.jpg);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 720px 720px;
+  color: #f6f5ef;
+}
+
+.label {
+  margin: 0;
+  color: rgb(255 255 255 / 50%);
+  font-family: var(--font-cinzel);
+  font-size: var(--type-case-label);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 1.02px;
+}
+
+.content {
+  margin: var(--space-section-xl) var(--content-inner-inset) 0;
+}
+
+.statement {
+  margin: 0;
+  color: #f6f5ef;
+  font-family: var(--font-pretendard);
+  font-size: var(--type-case-statement);
+  font-weight: 700;
+  line-height: 1.36;
+  letter-spacing: -1.8px;
+}
+
+.statementLine {
+  display: block;
+}
+
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: var(--space-section-lg);
+  text-align: right;
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.englishTitle,
+.koreanTitle,
+.metadata {
+  margin: 0;
+}
+
+.englishTitle {
+  color: rgb(255 255 255 / 50%);
+  font-family: var(--font-cinzel);
+  font-size: 13px;
+  font-size: clamp(13px, calc(0.749rem + 0.261vw), 17px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 1.02px;
+}
+
+.koreanTitle {
+  color: #f6f5ef;
+  font-family: var(--font-pretendard);
+  font-size: 22px;
+  font-size: clamp(22px, calc(1.152rem + 0.915vw), 36px);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -1.08px;
+}
+
+.metadata {
+  margin-top: var(--space-content-md);
+  color: rgb(255 255 255 / 80%);
+  font-family: var(--font-inter);
+  font-size: 14px;
+  font-size: clamp(14px, calc(0.827rem + 0.196vw), 17px);
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.51px;
+}
+
+@media (max-width: 40rem) {
+  .section {
+    padding-top: 88px;
+    padding-bottom: 104px;
+  }
+
+  .label {
+    font-size: 13px;
+    font-size: clamp(13px, calc(0.749rem + 0.261vw), 17px);
+    letter-spacing: 0.78px;
+  }
+
+  .content {
+    margin: 96px 0 0;
+  }
+
+  .statement {
+    font-size: 32px;
+    font-size: clamp(32px, calc(1.554rem + 1.83vw), 60px);
+    line-height: 1.36;
+    letter-spacing: -0.96px;
+  }
+
+  .statementLine {
+    display: inline;
+  }
+
+  .statementLine:not(:last-child)::after {
+    content: " ";
+  }
+
+  .projectInfo {
+    width: 100%;
+  }
+
+  .titleGroup {
+    gap: 12px;
+  }
+
+  .englishTitle {
+    font-size: 13px;
+    font-size: clamp(13px, calc(0.749rem + 0.261vw), 17px);
+    letter-spacing: 0.78px;
+  }
+
+  .koreanTitle {
+    font-size: 22px;
+    font-size: clamp(22px, calc(1.152rem + 0.915vw), 36px);
+    line-height: 1.4;
+    letter-spacing: -0.66px;
+  }
+
+  .metadata {
+    margin-top: 48px;
+    font-size: 14px;
+    font-size: clamp(14px, calc(0.827rem + 0.196vw), 17px);
+    line-height: 2;
+    letter-spacing: 0.42px;
+  }
+}

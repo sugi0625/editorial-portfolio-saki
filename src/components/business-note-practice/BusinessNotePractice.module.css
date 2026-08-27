@@ -1,0 +1,202 @@
+.section {
+  overflow: hidden;
+  padding-top: var(--space-section-md);
+  padding-bottom: var(--space-section-lg);
+  background-image: url("/media/common/bg_gray_dark.jpg");
+  background-position: left top;
+  background-repeat: repeat;
+  background-size: auto;
+  color: #151515;
+}
+
+/* ----------------------------------------
+   Header
+---------------------------------------- */
+
+.header {
+  width: 100%;
+}
+
+.caseLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  font-family: var(--font-cinzel), serif;
+  font-size: var(--type-case-label);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+
+  color: rgba(21, 21, 21, 0.5);
+}
+
+.statement {
+  display: flex;
+  flex-direction: column;
+  margin: var(--space-section-md) 0 0;
+  font-family: var(--font-pretendard), sans-serif;
+  font-size: var(--text-heading-3);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #151515;
+}
+
+/* ----------------------------------------
+   Visual composition
+---------------------------------------- */
+
+.visualGrid {
+  display: grid;
+  grid-template-columns:
+    minmax(calc(45% - var(--space-content-lg)), 380px)
+    minmax(calc(55% - var(--space-content-lg)), 480px);
+  grid-template-areas:
+    "form report"
+    "form management";
+  justify-content: space-between;
+  align-items: start;
+  column-gap: calc(var(--space-content-lg) * 2);
+  row-gap: var(--space-content-lg);
+  width: min(100%, 1212px);
+  margin: var(--space-7) auto 0;
+}
+
+.practiceItem {
+  min-width: 0;
+}
+
+.report {
+  grid-area: report;
+  width: min(100%, 480px);
+  justify-self: end;
+}
+
+.form {
+  grid-area: form;
+  width: min(100%, 380px);
+  padding-top: 60%;
+}
+
+.management {
+  grid-area: management;
+  justify-self: start;
+  width: min(28vw, 330px);
+  margin-left: -5%;
+}
+
+.itemLabel {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: var(--space-5);
+  font-family: var(--font-inter), sans-serif;
+  font-size: clamp(18px, 0.392vw + 16.47px, 24px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: #151515;
+  padding-inline: 5.5%;
+}
+
+.form .itemLabel {
+  font-size: clamp(16px, 0.392vw + 14.47px, 22px);
+  margin-bottom: var(--space-4);
+}
+
+.management .itemLabel {
+  font-size: clamp(15px, 0.196vw + 14.24px, 18px);
+  margin-bottom: var(--space-4);
+}
+
+.slash {
+  font-weight: 400;
+}
+
+.imageWrap {
+  outline: max(3px, min(0.131vw + 2.49px, 5px)) solid #151515;
+  outline-offset: 0;
+  border-radius: clamp(24px, 0.784vw + 20.94px, 36px);
+  box-shadow:
+    1.25em 1.875em 3.125em rgb(0 0 0 /12%),
+    0.5em 0.5em 1.5em rgb(0 0 0 /10%);
+  overflow: hidden;
+}
+
+/* ----------------------------------------
+   Closing
+---------------------------------------- */
+
+.endLabel {
+  margin-top: -1.0625em;
+  text-align: right;
+  font-family: var(--font-cinzel), serif;
+  font-size: var(--type-case-label);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  color: rgba(21, 21, 21, 0.5);
+}
+
+@media (max-width: 80rem) {
+  .management {
+    margin-left: -7vw;
+  }
+}
+
+@media (max-width: 56.25rem) {
+  .visualGrid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "report"
+      "form"
+      "management";
+
+    row-gap: var(--space-section-md);
+    width: 100%;
+  }
+
+  .report,
+  .form,
+  .management {
+    width: 90%;
+    justify-self: center;
+  }
+
+  .report {
+    max-width: 480px;
+  }
+
+  .form {
+    max-width: 380px;
+    padding-top: 0;
+  }
+
+  .management {
+    max-width: 330px;
+    margin-left: 0;
+  }
+
+  .endLabel {
+    margin-top: var(--space-content-lg);
+  }
+}
+
+@media (max-width: 40rem) {
+  .statement {
+    font-size: 32px;
+  }
+
+  .visualGrid {
+    margin-top: var(--space-content-lg);
+    row-gap: var(--space-section-md);
+  }
+
+  .form .itemLabel,
+  .report .itemLabel,
+  .management .itemLabel {
+    margin-bottom: 1.75rem;
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,252 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  color: #151515;
+  background-color: rgb(121 118 102 / 8%);
+  background-image: url("/media/common/bg_light_dark.jpg");
+  background-repeat: repeat;
+  background-position: left top;
+  background-size: 600px 600px;
+}
+
+.container {
+  position: relative;
+  padding-top: var(--space-section-lg);
+  padding-bottom: 180px;
+}
+
+.label {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: rgb(0 0 0 / 50%);
+  font-family: var(--font-cinzel);
+  font-size: var(--type-section-label);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.label span,
+.capabilities {
+  font-family: var(--font-cinzel);
+}
+
+.experienceMark {
+  position: absolute;
+  z-index: 0;
+  top: 4.5em;
+  right: -17%;
+  width: 54vw;
+  max-width: 1022px;
+  aspect-ratio: 1022 / 968;
+  margin: 0;
+  pointer-events: none;
+}
+
+.number,
+.years {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.number {
+  left: 0;
+}
+
+.years {
+  left: 0;
+}
+
+.supporting {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 400px;
+  gap: clamp(120px, calc(-67.08px + 24.327vw), 400px);
+  margin-top: 320px;
+}
+
+.copyGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-content-sm);
+  line-height: 1.8;
+}
+
+.statement {
+  margin: 0;
+  font-size: var(--type-editorial-statement);
+  font-weight: 700;
+  line-height: 1.36;
+  letter-spacing: -0.03em;
+}
+
+.description {
+  margin: 0;
+  color: rgb(0 0 0 / 80%);
+  font-size: 16px;
+  font-size: clamp(16px, calc(0.936rem + 0.261vw), 20px);
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: -0.02em;
+}
+
+.capabilities {
+  margin: 0;
+  color: rgb(0 0 0 / 90%);
+  font-size: 12px;
+  font-size: clamp(12px, calc(0.67rem + 0.327vw), 17px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+@media (max-width: 112rem) {
+  .experienceMark {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 64rem) {
+  .container {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+
+  .experienceMark {
+    width: 53vw;
+    transform: translateX(0);
+  }
+
+  .supporting {
+    margin-top: 300px;
+  }
+
+  .statement {
+    font-size: 30px;
+    font-size: clamp(30px, calc(1.397rem + 1.961vw), 60px);
+  }
+
+  .capabilities {
+    font-size: 12px;
+    font-size: clamp(12px, calc(0.67rem + 0.327vw), 17px);
+  }
+}
+
+@media (max-width: 48rem) {
+  .section,
+  .container {
+    min-height: 0;
+  }
+
+  .container {
+    display: grid;
+    grid-template-areas:
+      "label"
+      "copy"
+      "mark"
+      "capabilities";
+    grid-template-columns: minmax(0, 1fr);
+    padding-top: 96px;
+    padding-bottom: 128px;
+  }
+
+  .experienceMark {
+    position: relative;
+    top: auto;
+    right: -30%;
+    grid-area: mark;
+    width: calc(70vw + 50px);
+    height: auto;
+    margin-top: calc(5vw + 2em);
+  }
+
+  .label {
+    grid-area: label;
+  }
+
+  .supporting {
+    display: contents;
+  }
+
+  .copyGroup {
+    position: relative;
+    z-index: 1;
+    grid-area: copy;
+    gap: 40px;
+    margin-top: 88px;
+  }
+
+  .statement {
+    font-size: 30px;
+    font-size: clamp(30px, calc(1.397rem + 1.961vw), 60px);
+    line-height: 1.4;
+  }
+
+  .description {
+    font-size: 16px;
+    font-size: clamp(16px, calc(0.936rem + 0.261vw), 20px);
+  }
+
+  .capabilities {
+    position: relative;
+    z-index: 1;
+    grid-area: capabilities;
+    margin-top: 96px;
+    font-size: 12px;
+    font-size: clamp(12px, calc(0.67rem + 0.327vw), 17px);
+    line-height: 1.8;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 40rem) {
+  .container {
+    padding-top: 80px;
+    padding-bottom: 104px;
+  }
+
+  .copyGroup {
+    gap: 32px;
+    margin-top: 64px;
+  }
+
+  .statement {
+    font-size: 30px;
+    font-size: clamp(30px, calc(1.397rem + 1.961vw), 60px);
+    letter-spacing: -0.04em;
+  }
+
+  .description {
+    font-size: 16px;
+    font-size: clamp(16px, calc(0.936rem + 0.261vw), 20px);
+  }
+
+  .capabilities {
+    margin-top: 80px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .label,
+  .number,
+  .years,
+  .statement,
+  .description,
+  .capabilities {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+}

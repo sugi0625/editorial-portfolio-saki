@@ -1,0 +1,244 @@
+.hero {
+  position: relative;
+  min-height: 42rem;
+  height: 100vh;
+  height: 100svh;
+  overflow: hidden;
+  background-color: #0e0e0e;
+  background-image: url("/media/common/bg_black.jpg");
+  background-repeat: repeat;
+  background-position: left top;
+  background-size: 720px 720px;
+  color: #f6f5ef;
+  isolation: isolate;
+}
+
+.composition {
+  position: relative;
+  z-index: var(--z-content);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 3.5rem;
+  padding-bottom: 10rem;
+}
+
+.metadata {
+  margin: 0;
+  color: #f6f5ef;
+  white-space: nowrap;
+}
+
+.runningTitle {
+  overflow: hidden;
+  flex: none;
+  color: rgb(255 255 255 / 60%);
+  font-family: var(--font-cinzel);
+  font-size: 12px;
+  font-size: clamp(12px, calc(0.67rem + 0.327vw), 17px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-overflow: ellipsis;
+}
+
+.main {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-height: 0;
+  gap: 3rem;
+}
+
+.statement {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  font-family: var(--font-pretendard);
+  font-size: 40px;
+  font-size: clamp(40px, calc(1.703rem + 3.268vw), 90px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+.statementLine {
+  display: block;
+}
+
+.metadata {
+  flex: none;
+  font-family: var(--font-inter);
+  font-size: 11px;
+  font-size: clamp(11px, calc(0.608rem + 0.327vw), 16px);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+.background {
+  position: absolute;
+  z-index: var(--z-base);
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.backgroundCanvas {
+  position: absolute;
+  top: -3.5rem;
+  left: -4.4375rem;
+  width: 142.375rem;
+  height: 42.5rem;
+  color: #fff;
+  font-family: var(--font-inter);
+  font-size: 176px;
+  font-size: clamp(176px, calc(9.662rem + 5.49vw), 260px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  opacity: 0.03;
+  will-change: transform;
+}
+
+.backgroundType {
+  position: absolute;
+  margin: 0;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.backgroundName {
+  top: 0;
+  left: 0;
+}
+
+.backgroundRole {
+  top: 13.125rem;
+  left: 18.9375rem;
+}
+
+.backgroundSince {
+  top: 26.25rem;
+  left: 45.5rem;
+}
+
+@media (max-width: 89.999rem) {
+  .composition {
+    padding-top: 3.125rem;
+    padding-bottom: 10rem;
+  }
+
+  .statement {
+    font-size: 40px;
+    font-size: clamp(40px, calc(1.703rem + 3.268vw), 90px);
+  }
+
+  .backgroundCanvas {
+    left: -7rem;
+  }
+}
+
+@media (max-width: 63.999rem) {
+  .composition {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+  }
+
+  .main {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 4rem;
+  }
+
+  .statement {
+    font-size: 40px;
+    font-size: clamp(40px, calc(1.703rem + 3.268vw), 90px);
+  }
+
+  .metadata {
+    align-self: flex-end;
+  }
+
+  .backgroundCanvas {
+    top: -2rem;
+    left: -18rem;
+    font-size: 176px;
+    font-size: clamp(176px, calc(9.662rem + 5.49vw), 260px);
+  }
+}
+
+@media (max-width: 47.999rem) {
+  .hero {
+    min-height: 42rem;
+  }
+
+  .composition {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+  }
+
+  .runningTitle {
+    max-width: 100%;
+    font-size: 12px;
+    font-size: clamp(12px, calc(0.67rem + 0.327vw), 17px);
+  }
+
+  .main {
+    gap: 4rem;
+  }
+
+  .statement {
+    gap: 0.75rem;
+    width: 100%;
+    font-size: 40px;
+    font-size: clamp(40px, calc(1.703rem + 3.268vw), 90px);
+    letter-spacing: -0.05em;
+    white-space: normal;
+  }
+
+  .statementLine {
+    white-space: nowrap;
+  }
+
+  .metadata {
+    align-self: flex-start;
+    max-width: 100%;
+    font-size: 11px;
+    font-size: clamp(11px, calc(0.608rem + 0.327vw), 16px);
+    letter-spacing: 0.025em;
+    text-align: left;
+  }
+
+  .backgroundCanvas {
+    top: -1.75rem;
+    left: -27rem;
+    font-size: 176px;
+    font-size: clamp(176px, calc(9.662rem + 5.49vw), 260px);
+    opacity: 0.035;
+  }
+
+  .backgroundRole {
+    top: 10rem;
+    left: 12rem;
+  }
+
+  .backgroundSince {
+    top: 20rem;
+    left: 24rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backgroundType {
+    transform: none;
+    will-change: auto;
+  }
+}

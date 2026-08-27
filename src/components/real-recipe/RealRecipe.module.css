@@ -1,0 +1,377 @@
+.section {
+  overflow: hidden;
+
+  padding-top: var(--space-section-md);
+  padding-bottom: var(--space-section-lg);
+
+  background-image: url("/media/common/bg_gray_dark.jpg");
+  background-position: left top;
+  background-repeat: repeat;
+  background-size: auto;
+
+  color: #151515;
+}
+
+/* ----------------------------------------
+   TOP META
+----------------------------------------- */
+
+.topMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.sectionLabel {
+  margin: 0;
+
+  font-family: var(--font-inter), sans-serif;
+  font-size: var(--type-section-label);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: #151515;
+}
+
+.category {
+  margin: 0;
+
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+
+  color: rgb(21 21 21 / 50%);
+}
+
+/* ----------------------------------------
+   INTRO
+----------------------------------------- */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  margin-top: var(--space-content-lg);
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 32px;
+}
+
+.projectIndex {
+  margin: 0;
+
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  letter-spacing: 0.03em;
+
+  color: rgb(21 21 21 / 60%);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+
+  font-family: var(--font-inter), sans-serif;
+  font-size: 112px;
+  font-weight: 800;
+  line-height: 0.96;
+  letter-spacing: 0.01em;
+
+  color: #151515;
+}
+
+.title span {
+  display: block;
+}
+
+/* ----------------------------------------
+   DESCRIPTION
+----------------------------------------- */
+
+.descriptionGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  width: 100%;
+
+  margin-top: var(--space-content-md);
+
+  gap: 24px;
+
+  text-align: right;
+}
+
+.lead {
+  margin: 0;
+
+  font-family: var(--font-pretendard), sans-serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.03em;
+
+  color: rgb(0 0 0 / 80%);
+}
+
+.lead span {
+  display: block;
+}
+
+.description {
+  width: 100%;
+  max-width: 600px;
+
+  margin: 0;
+
+  font-family: var(--font-pretendard), sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: -0.02em;
+
+  color: rgb(0 0 0 / 60%);
+}
+
+.description span {
+  display: block;
+}
+
+/* ----------------------------------------
+   VISUAL AREA
+----------------------------------------- */
+
+.visualArea {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  margin-top: var(--space-content-md);
+}
+
+.screenGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  align-items: start;
+
+  width: 100%;
+
+  gap: var(--space-content-sm);
+}
+
+.screenItem {
+  display: flex;
+  justify-content: center;
+
+  min-width: 0;
+
+  margin: 0;
+}
+
+.screenOffset {
+  padding-top: 100px;
+}
+
+.screenImage {
+  display: block;
+
+  width: 100%;
+  max-width: 336px;
+  height: auto;
+
+  border-radius: 30px;
+  border-radius: clamp(16px, 12.4314px + 0.915vw, 30px);
+  border: 4px solid rgb(0 0 0 / 90%);
+
+  box-shadow:
+    8px 10px 30px rgb(0 0 0 / 12%),
+    3px 3px 10px rgb(0 0 0 / 15%);
+}
+
+/* ----------------------------------------
+   PROJECT META
+----------------------------------------- */
+
+.projectMeta {
+  width: 100%;
+
+  margin: var(--space-content-lg) 0 0;
+
+  text-align: right;
+
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  letter-spacing: 0.03em;
+
+  color: rgb(21 21 21 / 60%);
+}
+
+/* ----------------------------------------
+   FLUID TYPOGRAPHY
+----------------------------------------- */
+
+@supports (font-size: clamp(1px, 2vw, 3px)) {
+  .title {
+    font-size: clamp(64px, calc(2rem + 4.167vw), 112px);
+  }
+
+  .lead {
+    font-size: clamp(24px, calc(1.08rem + 1.176vw), 36px);
+  }
+
+  .description {
+    font-size: clamp(15px, calc(0.84rem + 0.196vw), 17px);
+  }
+
+  .projectIndex,
+  .projectMeta {
+    font-size: clamp(14px, calc(0.827rem + 0.196vw), 16px);
+  }
+
+  .category {
+    font-size: clamp(12px, 11.4902px + 0.1307vw, 14px);
+  }
+}
+
+/* ----------------------------------------
+   TABLET
+----------------------------------------- */
+
+@media (max-width: 900px) {
+  .section {
+    padding-top: 88px;
+    padding-bottom: 104px;
+  }
+
+  .intro {
+    margin-top: 96px;
+  }
+
+  .titleGroup {
+    gap: 24px;
+  }
+
+  .descriptionGroup {
+    align-items: flex-start;
+
+    margin-top: 64px;
+
+    gap: 20px;
+
+    text-align: left;
+  }
+
+  .description {
+    max-width: 540px;
+  }
+
+  .visualArea {
+    margin-top: 120px;
+  }
+
+  .screenGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 32px;
+    row-gap: 72px;
+  }
+
+  .screenOffset {
+    padding-top: 72px;
+  }
+
+  .screenImage {
+    border-width: 3px;
+    border-radius: 28px;
+  }
+
+  .projectMeta {
+    margin-top: 72px;
+  }
+}
+
+/* ----------------------------------------
+   MOBILE
+----------------------------------------- */
+
+@media (max-width: 640px) {
+  .topMeta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .category {
+    margin-top: 0.75em;
+  }
+
+  .intro {
+    margin-top: 80px;
+  }
+
+  .titleGroup {
+    gap: 20px;
+  }
+
+  .title {
+    font-size: clamp(56px, 18vw, 72px);
+  }
+
+  .descriptionGroup {
+    margin-top: 56px;
+  }
+
+  .lead {
+    max-width: 320px;
+  }
+
+  .description {
+    max-width: 342px;
+  }
+
+  .visualArea {
+    margin-top: 96px;
+  }
+
+  .screenGrid {
+    column-gap: 16px;
+    row-gap: 48px;
+  }
+
+  .screenOffset {
+    padding-top: 48px;
+  }
+
+  .screenImage {
+    border-width: 2px;
+    border-radius: 16px;
+    border-radius: clamp(16px, 12.4314px + 0.915vw, 30px);
+  }
+
+  .projectMeta {
+    margin-top: 64px;
+
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,248 @@
+.section {
+  overflow: hidden;
+  padding-top: var(--space-section-md);
+  padding-bottom: var(--space-section-lg);
+  background-color: #272727;
+  background-image: url("/media/common/bg_dark.jpg");
+  background-position: left top;
+  background-repeat: repeat;
+  background-size: auto;
+  color: #f6f5ef;
+}
+
+.container {
+  position: relative;
+  padding-inline: var(--content-inner-inset);
+}
+
+.label {
+  margin: 0;
+  color: rgb(255 255 255 / 50%);
+  font-family: var(--font-cinzel);
+  font-size: 17px;
+  font-size: clamp(17px, calc(1.063rem + 0vw), 17px);
+  font-weight: 500;
+  letter-spacing: 1.02px;
+  line-height: 1.5;
+}
+
+.statementRow {
+  margin-top: var(--space-section-xl);
+}
+
+.statement {
+  display: flex;
+  width: min(100%, 570px);
+  margin: 0 0 0 auto;
+  flex-direction: column;
+  color: #f6f5ef;
+  font-family: var(--font-pretendard);
+  font-size: var(--type-case-statement);
+  font-weight: 700;
+  letter-spacing: -1.8px;
+  line-height: 1.36;
+  text-align: left;
+}
+
+.comparison {
+  display: grid;
+  margin-top: 36px;
+  grid-template-columns: 420px 570px;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.keepBlock,
+.changeBlock {
+  margin: 0;
+}
+
+.changeBlock {
+  padding-top: 180px;
+}
+
+.keepImage,
+.changeImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.keepImage {
+  max-width: 420px;
+}
+.changeImage {
+  max-width: 570px;
+}
+
+.caption {
+  display: flex;
+  margin-top: var(--space-content-sm);
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.captionTitle {
+  font-family: var(--font-inter);
+  font-size: 30px;
+  font-size: clamp(22px, calc(1.248rem + 0.523vw), 30px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+
+.captionCopy {
+  margin-top: 24px;
+  color: rgb(255 255 255 / 80%);
+  font-family: var(--font-pretendard);
+  font-size: 17px;
+  font-size: clamp(14px, calc(0.827rem + 0.196vw), 17px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.8;
+}
+
+@media (min-width: 56.3125rem) {
+  .statementRow,
+  .comparison {
+    grid-template-columns: minmax(0, 42.4fr) minmax(0, 57.6fr);
+    column-gap: 8%;
+  }
+
+  .statementRow {
+    display: grid;
+  }
+
+  .statement {
+    grid-column: 2;
+    width: 100%;
+    max-width: 570px;
+    justify-self: end;
+  }
+
+  .keepBlock,
+  .changeBlock {
+    width: 100%;
+  }
+
+  .keepBlock {
+    max-width: 420px;
+  }
+
+  .changeBlock {
+    max-width: 570px;
+    justify-self: end;
+  }
+
+  .keepImage,
+  .changeImage {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+}
+
+@media (min-width: 56.3125rem) and (max-width: 89.9375rem) {
+  .changeBlock {
+    padding-top: 180px;
+    padding-top: clamp(96px, 12.5vw, 180px);
+  }
+}
+
+@media (min-width: 40.0625rem) and (max-width: 56.25rem) {
+  .statementRow {
+    position: relative;
+    left: 50%;
+    width: min(calc(100vw - 48px), 592px);
+    margin-inline: auto;
+    transform: translateX(-50%);
+  }
+
+  .statement {
+    margin-left: 0;
+  }
+
+  .comparison {
+    position: relative;
+    left: 50%;
+    width: min(calc(100vw - 48px), 592px);
+    margin-inline: auto;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 96px;
+    gap: clamp(80px, 10vw, 96px);
+    transform: translateX(-50%);
+  }
+
+  .changeBlock {
+    padding-top: 0;
+  }
+
+  .keepImage,
+  .changeImage {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+}
+
+@media (max-width: 40rem) {
+  .section {
+    padding-top: 88px;
+    padding-bottom: 104px;
+  }
+
+  .container {
+    padding-inline: 0;
+  }
+
+  .label {
+    font-size: 13px;
+    font-size: clamp(13px, calc(0.749rem + 0.261vw), 17px);
+    letter-spacing: 0.78px;
+  }
+
+  .statementRow {
+    margin-top: 96px;
+  }
+
+  .statement {
+    width: 100%;
+    margin: 0;
+    font-size: 32px;
+    font-size: clamp(32px, calc(1.554rem + 1.83vw), 60px);
+    letter-spacing: -0.96px;
+    line-height: 1.36;
+    text-align: left;
+  }
+
+  .comparison {
+    display: grid;
+    margin-top: 72px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 96px;
+  }
+
+  .changeBlock {
+    padding-top: 0;
+  }
+
+  .keepImage,
+  .changeImage {
+    width: 100%;
+    max-width: none;
+  }
+
+  .caption {
+    margin-top: 36px;
+  }
+
+  .captionTitle {
+    font-size: 22px;
+    font-size: clamp(22px, calc(1.343rem + 0.131vw), 24px);
+  }
+
+  .captionCopy {
+    font-size: 14px;
+    font-size: clamp(14px, calc(0.859rem + 0.065vw), 15px);
+  }
+}
