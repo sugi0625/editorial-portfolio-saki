@@ -1,0 +1,1 @@
+export { FashionVisualStory } from "./FashionVisualStory";

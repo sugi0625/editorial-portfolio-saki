@@ -1,0 +1,152 @@
+.section {
+  width: 100%;
+  background: #f5f2ec;
+  color: #171715;
+}
+
+.inner {
+  width: min(calc(100vw - 240px), 1680px);
+  margin: 0 auto;
+  padding: clamp(104px, 7.292vw, 140px) 0 clamp(112px, 8.333vw, 160px);
+  box-sizing: border-box;
+}
+
+.eyebrow {
+  margin: 0;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #68645f;
+}
+
+.content {
+  max-width: 1400px;
+  margin: clamp(80px, 5.729vw, 110px) auto 0;
+}
+
+.statement {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(36px, 2.188vw, 42px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  display: flex;
+}
+.statement span {
+  margin-left: auto;
+}
+
+.visuals {
+  display: grid;
+  grid-template-columns: minmax(0, 560fr) minmax(0, 640fr);
+  margin-top: clamp(52px, 3.646vw, 70px);
+  width: 100%;
+  column-gap: 8vw;
+}
+
+.leftFigure,
+.rightFigure {
+  margin: 0;
+}
+
+.leftFigure {
+  width: 100%;
+  max-width: 560px;
+}
+
+.rightFigure {
+  margin-top: min(8vw, 120px);
+  width: 100%;
+  max-width: 640px;
+  margin-left: auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 56px;
+  font-family: var(--font-inter), var(--font-pretendard), sans-serif;
+}
+
+.caption strong {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.caption span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #625e59;
+}
+
+@media (max-width: 1440px) {
+  .inner {
+    width: min(calc(100vw - 160px), 1280px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .inner {
+    width: calc(100vw - 96px);
+    padding: 96px 0 112px;
+  }
+
+  .content {
+    padding: 0;
+    margin-top: 88px;
+  }
+
+  .statement {
+    width: 100%;
+    font-size: 38px;
+  }
+
+  .visuals {
+    margin-top: 72px;
+  }
+}
+
+@media (max-width: 767px) {
+  .inner {
+    width: calc(100vw - 48px);
+    padding: 80px 0 88px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+  }
+
+  .content {
+    margin-top: 72px;
+  }
+
+  .statement {
+    font-size: 34px;
+    line-height: 1.08;
+  }
+
+  .statement span {
+    margin-left: 0;
+  }
+
+  .visuals {
+    grid-template-columns: 1fr;
+    gap: 56px;
+    margin-top: 56px;
+  }
+
+  .caption {
+    margin-top: 22px;
+  }
+}

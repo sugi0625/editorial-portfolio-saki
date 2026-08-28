@@ -16,6 +16,13 @@ import { WellDigitalExperience } from "@/components/well-digital-experience";
 import { RealRecipe } from "@/components/real-recipe";
 import { Closing } from "@/components/closing";
 import { SmileFarm } from "@/components/smile-farm";
+import { FashionVisual } from "@/components/fashion-visual";
+import { FashionVisualOpening } from "@/components/fashion-visual-opening";
+import { FashionVisualMood } from "@/components/fashion-visual-mood";
+import { FashionVisualProduct } from "@/components/fashion-visual-product";
+import { FashionVisualStyleNotes } from "@/components/fashion-visual-style-notes";
+import { FashionVisualStory } from "@/components/fashion-visual-story";
+import { FashionVisualDetails } from "@/components/fashion-visual-details";
 
 export default function Home() {
   return (
@@ -24,6 +31,13 @@ export default function Home() {
       <PointOfView />
       <Experience />
       <HowIWork />
+      <FashionVisual />
+      <FashionVisualOpening />
+      <FashionVisualMood />
+      <FashionVisualProduct />
+      <FashionVisualStyleNotes />
+      <FashionVisualStory />
+      <FashionVisualDetails />
       <SeoDaeguOpening />
       <SeoDaeguStructure />
       <SeoDaeguRefine />

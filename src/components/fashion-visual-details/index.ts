@@ -1,0 +1,1 @@
+export { FashionVisualDetails } from "./FashionVisualDetails";

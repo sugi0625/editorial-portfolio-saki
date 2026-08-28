@@ -1,0 +1,1 @@
+export { FashionVisualOpening } from "./FashionVisualOpening";

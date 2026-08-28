@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "../styles/tokens.css";
 
+:root {
+  --font-cormorant: "Cormorant Garamond";
+}
+
 @theme inline {
   --font-sans: var(--font-pretendard);
   --font-english: var(--font-inter);

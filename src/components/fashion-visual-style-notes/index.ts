@@ -1,0 +1,1 @@
+export { FashionVisualStyleNotes } from "./FashionVisualStyleNotes";
